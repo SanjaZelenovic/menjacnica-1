@@ -1,28 +1,21 @@
 package menjacnica.gui;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.io.File;
 
 import javax.swing.JFileChooser;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 
 import menjacnica.Menjacnica;
 import menjacnica.MenjacnicaInterface;
 import menjacnica.Valuta;
 
-public class GUIKontroler extends JFrame {
+public class GUIKontroler {
 
 	private static MenjacnicaGUI menjacnicaGUI;
 	private static MenjacnicaInterface menjacnica;
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private static JPanel contentPane;
 
 	/**
@@ -46,14 +39,14 @@ public class GUIKontroler extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public GUIKontroler() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane);
-	}
+//	public GUIKontroler() {
+//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		setBounds(100, 100, 450, 300);
+//		contentPane = new JPanel();
+//		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+//		contentPane.setLayout(new BorderLayout(0, 0));
+//		setContentPane(contentPane);
+//	}
 
 	public static void ugasiAplikaciju() {
 		int opcija = JOptionPane.showConfirmDialog(contentPane,
@@ -114,7 +107,7 @@ public class GUIKontroler extends JFrame {
 	}
 
 	static public void prikaziDodajKursGUI() {
-		DodajKursGUI prozor = new DodajKursGUI(menjacnicaGUI);
+		DodajKursGUI prozor = new DodajKursGUI();
 		prozor.setLocationRelativeTo(contentPane);
 		prozor.setVisible(true);
 	}
